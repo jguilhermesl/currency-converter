@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JGSL - Conversor de Moedas
+    </title>
+</head>
+
+<body>
+    <div id="cabecalho">
+        <h1> JGSL - Conversor de Moedas </h1>
+    </div>
+    <div id="caixap">
+        <p class="paragrafo"> Converter <b>de</b> </p>
+        <select class="select" id="selectDe">
+            <option> R$ Real Brasileiro</option>
+            >
+        </select>
+        <p class="paragrafo"> Converter <b>para</b> </p>
+        <select class="select" id="selectPara">
+            <option>US$ Dolar</option>
+            <option>€ Euro</option>
+            <option>G Money</option>>
+        </select>
+        <p class="paragrafo"> <b>Valor</b> </p>
+        <input id="input" placeholder="R$ 10.000,00" type="number">
+        <button id="botao"> Converter </button>
+        <div id="caixaint">
+            <div class="caixamenor">
+                <img src="./imagem/brasil 2.png">
+                <p class="paragrafo"> Real </p>
+                <p class="paragrafoneg" id="inputReais"> R$ 10.000,00</p>
+            </div>
+
+            <img id="seta" src="./imagem/seta.png">
+
+            <div class="caixamenor">
+                <img id="bandeiraPara" src="./imagem/estados-unidos (1) 1.png">
+                <p class="paragrafo" id="textoDolar">Dólar Americano</p>
+                <p class="paragrafoneg" id="inputMoedas"> $ 2.000,00</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+        padding: 0%;
+        margin: 0%;
+    }
+
+
+
+    #cabecalho {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        background: indigo;
+        width: 375px;
+        height: 50px;
+    }
+
+    #caixap {
+        margin-left: auto;
+        margin-right: auto;
+        background-color:white;
+        width: 327px;
+        height: 700px;
+        padding: 24px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .paragrafo {
+        margin-bottom: 6px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .select {
+        background: #FFFFFF;
+        border: 1px solid #BBBBBB;
+        box-sizing: border-box;
+        border-radius: 8px;
+        height: 48px;
+        width: 327px;
+        margin-bottom: 23px;
+        outline: none;
+        appearance: none;
+        cursor: pointer;
+        padding-left: 16px;
+        font-size: 16px;
+        font-weight: bold;
+
+    }
+
+    #input {
+        background: #FFFFFF;
+        border: 1px solid #BBBBBB;
+        border-radius: 8px;
+        height: 48px;
+        width: 310px;
+        margin-bottom: 23px;
+        outline: none;
+        appearance: none;
+        cursor: pointer;
+        padding-left: 16px;
+        font-size: 16px;
+
+    }
+
+    #botao {
+        background: #CDD728;
+        border-radius: 25px;
+        display: block;
+        height: 48px;
+        width: 327px;
+        padding-left: 16px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 23px;
+        font-weight: bold;
+        color: white;
+
+    }
+
+    #botao:active {
+        opacity: 0.6;
+    }
+
+    #caixaint {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border: 1px solid black;
+
+    }
+
+    .caixamenor {
+        text-align: center;
+
+    }
+
+    #seta {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .paragrafoneg {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    body {
+        background-image: url(./imagem/fundo.jpg);
+
+
+    }
+</style>
+<script src="./scripts.js">
+
+</script>
+
+</html>
