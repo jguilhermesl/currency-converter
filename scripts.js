@@ -1,18 +1,18 @@
 
 let botao = document.getElementById("botao")
 let select = document.getElementById("selectPara")
-let gui = 8.7
 
 
 console.log(inputMoedas)
 async function converterMoedas() {
 
-    let moedas = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL").then(function (resposta) {
+    let moedas = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(function (resposta) {
         return resposta.json()
     })
 
     let dolar = moedas.USDBRL.high
     let euro = moedas.EURBRL.high
+    let bitCoin = 197911.5
 
 
 
@@ -30,9 +30,9 @@ async function converterMoedas() {
         let valorEmEuro = inputValorEmReais / euro
         inputMoedas.innerHTML = valorEmEuro.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })
     }
-    if (select.value === "G Money") {
-        let valorEmGui = inputValorEmReais / gui
-        inputMoedas.innerHTML = valorEmGui.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    if (select.value === "Bit Coin") {
+        let valorEmBitCoin = inputValorEmReais / bitCoin
+        inputMoedas.innerHTML = valorEmBitCoin.toFixed(2)
     }
 
 
@@ -59,9 +59,9 @@ async function converterMoedas() {
 
 
         }
-        if (select.value === "G Money") {
-            textoDolar.innerHTML = "Gui Money"
-            bandeiraPara.src = "./imagem/money.png"
+        if (select.value === "Bit Coin") {
+            textoDolar.innerHTML = "Bit Coin"
+            bandeiraPara.src = "./imagem/bit-coin.png"
         }
         converterMoedas()
     }

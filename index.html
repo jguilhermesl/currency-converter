@@ -14,37 +14,39 @@
 </head>
 
 <body>
-    <div id="cabecalho">
-        <h1> JGSL - Conversor de Moedas </h1>
-    </div>
-    <div id="caixap">
-        <p class="paragrafo"> Converter <b>de</b> </p>
-        <select class="select" id="selectDe">
-            <option> R$ Real Brasileiro</option>
-            >
-        </select>
-        <p class="paragrafo"> Converter <b>para</b> </p>
-        <select class="select" id="selectPara">
-            <option>US$ Dolar</option>
-            <option>€ Euro</option>
-            <option>G Money</option>>
-        </select>
-        <p class="paragrafo"> <b>Valor</b> </p>
-        <input id="input" placeholder="R$ 10.000,00" type="number">
-        <button id="botao"> Converter </button>
-        <div id="caixaint">
-            <div class="caixamenor">
-                <img src="./imagem/brasil 2.png">
-                <p class="paragrafo"> Real </p>
-                <p class="paragrafoneg" id="inputReais"> R$ 10.000,00</p>
-            </div>
+    <div class="container">
+        <div id="cabecalho">
+            <h1> JGSL - Conversor de Moedas </h1>
+        </div>
+        <div id="caixap">
+            <p class="paragrafo"> Converter <b>de</b> </p>
+            <select class="select" id="selectDe">
+                <option> R$ Real Brasileiro</option>
+                >
+            </select>
+            <p class="paragrafo"> Converter <b>para</b> </p>
+            <select class="select" id="selectPara">
+                <option>US$ Dolar</option>
+                <option>€ Euro</option>
+                <option>Bit Coin</option>>
+            </select>
+            <p class="paragrafo"> <b>Valor</b> </p>
+            <input id="input" placeholder="R$ 10.000,00" type="number">
+            <button id="botao"> Converter </button>
+            <div id="caixaint">
+                <div class="caixamenor">
+                    <img src="./imagem/brasil 2.png">
+                    <p class="paragrafo"> Real </p>
+                    <p class="paragrafoneg" id="inputReais"> R$ 10.000,00</p>
+                </div>
 
-            <img id="seta" src="./imagem/seta.png">
+                <img id="seta" src="./imagem/Vector.png">
 
-            <div class="caixamenor">
-                <img id="bandeiraPara" src="./imagem/estados-unidos (1) 1.png">
-                <p class="paragrafo" id="textoDolar">Dólar Americano</p>
-                <p class="paragrafoneg" id="inputMoedas"> $ 2.000,00</p>
+                <div class="caixamenor">
+                    <img id="bandeiraPara" src="./imagem/estados-unidos (1) 1.png">
+                    <p class="paragrafo" id="textoDolar">Dólar Americano</p>
+                    <p class="paragrafoneg" id="inputMoedas"> $ 2.000,00</p>
+                </div>
             </div>
         </div>
     </div>
@@ -57,23 +59,27 @@
         margin: 0%;
     }
 
-
+    .container {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-top: 50px;
+    }
 
     #cabecalho {
-        margin-top: 50px;
         margin-left: auto;
         margin-right: auto;
         background: indigo;
         width: 375px;
         height: 50px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
     }
 
     #caixap {
         margin-left: auto;
         margin-right: auto;
-        background-color:white;
+        background-color: white;
         width: 327px;
-        height: 700px;
+        height: 650px;
         padding: 24px;
     }
 
@@ -169,9 +175,7 @@
     }
 
     body {
-        background-image: url(./imagem/fundo.jpg);
-
-
+        background: #F5F5F5
     }
 </style>
 <script src="./scripts.js">
